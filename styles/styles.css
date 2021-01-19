@@ -129,7 +129,32 @@ html, body {
     border: 0.3rem solid var(--color-Score);
     display: inline-block;
     cursor: pointer;
+
 }
 
+.o {
+    position: relative;
+}
 
+.o:after {
+    position: absolute;
+    content: 'O';
+    font-size: 8rem;
+    line-height: 8rem;
+    color: var(--color-Score);
+    left: 25%;
+}
+
+.x {
+    position: relative;
+}
+
+.x:after {
+    position: absolute;
+    content: 'X';
+    font-size: 8rem;
+    line-height: 8rem;
+    color: var(--color-Score);
+    left: 25%;
+}
 
