@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Jogo Da Velha</title>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="stage">
+
+            <div class="players">
+                
+                <div class="playerScore">
+                    <p>Player 1</p>
+                    <div class="playerSymbol">
+                            <span>O</span>
+                    </div>
+                </div>
+
+                <div class="score">
+                    <p>Score</p>
+
+                    <span>2</span>
+                    <span id="separator">|</span>
+                    <span>3</span>
+                </div>
+
+                <div class="playerScore">
+                    <p>Player 2</p>
+                    <div class="playerSymbol">
+                        <span>X</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-stage">
+                <div>
+                    <div id="0" class="square"></div>
+                    <div id="1" class="square"></div>
+                    <div id="2" class="square"></div>
+                </div>
+                <div>
+                    <div id="3" class="square"></div>
+                    <div id="4" class="square"></div>
+                    <div id="5" class="square"></div>
+                </div>
+                <div>
+                    <div id="6" class="square"></div>
+                    <div id="7" class="square"></div>
+                    <div id="8" class="square"></div>
+                </div>
+            </div>
+
+            <div class="button-restart">
+                <button>Reiniciar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./Scripts/game.js"></script>
+    <script src="./Scripts/interface.js"></script>
+</body>
+
+</html>
