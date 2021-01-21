@@ -17,10 +17,11 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--color-Players);
 }
 
 .stage {
-    width: 40rem;
+    width: 50rem;
     height: 54rem;
 
     display: flex;
@@ -93,8 +94,7 @@ html, body {
     font-size: 4rem;
     font-weight: bold;
     line-height: 2rem;
-    padding: 0.3rem;
-    
+    padding: 0.3rem;   
 }
 
 #separator {
@@ -112,7 +112,7 @@ html, body {
 }
 
 .button-restart button{
-    width: 70%;
+    width: 80%;
     height: 8rem;
     
     font-size: 3rem;
@@ -120,16 +120,19 @@ html, body {
     color: var(--color-Players);
     cursor: pointer;
 
+    border-radius: 0.8rem;
+    border: none;
 }
 
 .square {
-    gap: 0.3rem;
     width: 12rem;
     height: 8rem;
     border: 0.3rem solid var(--color-Score);
     display: inline-block;
     cursor: pointer;
+    margin: 0.5rem;
 
+    border-radius: 0.8rem;
 }
 
 .o {

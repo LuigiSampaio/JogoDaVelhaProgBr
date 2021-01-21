@@ -14,6 +14,9 @@ let winStates = [
     [2, 4, 6],
 ];
 
+let winO = 0;
+let winX = 0;
+
 let handleMove = (position) => {
 
     if (gameOver) {

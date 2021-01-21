@@ -13,12 +13,16 @@ let handleClick = (event) => {
     let square = event.target;
     let position = square.id;
 
-   if (handleMove(position)) {
+    if (handleMove(position)) {
         setTimeout(() => {
-            alert("O Jogo Acabou -- O Vencedor Foi o Player " + playerTime);
+            alert("O Jogo Acabou -- O Vencedor Foi o Player " + (playerTime + 1 ));
         }, 10);
-   };
+
+        updateScore();
+
+    };
     updateSquare(position);
+    /* updateSquares(); */
 }
 
 let updateSquare = (position) => {
@@ -40,3 +44,46 @@ let updateSquare = (position) => {
         }
     })
 } */
+
+let updateScore = () => {
+    scoreO();
+    scoreX();
+
+    document.getElementById("scoreX")
+    scoreX.innerHTML = `${winX}`;
+}
+
+let scoreO = () => {
+    if (gameOver == true && playerTime == 0) {
+        winO += 1;
+
+        let upScoreO = document.getElementById("scoreO");
+        upScoreO.innerHTML = `${winO}`;
+    }   
+    return winO;
+}
+
+let scoreX = () => {
+    if (gameOver == true && playerTime == 1) {
+        winX += 1;
+
+        let upScoreX = document.getElementById("scoreX");
+        upScoreX.innerHTML = `${winX}`;
+    }
+    return winX;
+}
+
+let restart = () => {
+    let squares = document.querySelectorAll(".square");
+
+    squares.forEach((square) => {
+        for (i = 0; i < board.length; i++) {
+            square.innerHTML = `<div class=''> </div>`;
+            board[i] = '';
+        }
+
+        playerTime = 0;
+    });
+
+    gameOver = false;
+}
