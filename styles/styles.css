@@ -1,6 +1,7 @@
 :root {
     --color-Players: #171717; 
     --color-Score: #feffff;
+    --yellow: yellow;
 }
 
 html, body {
@@ -161,3 +162,37 @@ html, body {
     left: 25%;
 }
 
+#gameOver {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--color-Score);
+    font-size: 3rem;
+
+    display: none;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#restart {
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--color-Score);
+    border: none;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+#gameBoard {
+    max-width: 70rem;
+
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+    gap: 1.5rem;
+}
